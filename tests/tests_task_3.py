@@ -11,7 +11,8 @@ class TestYandexAuth:
     def setup_method(self):
         self.chrome_path = ChromeDriverManager().install()
         self.options = ChromeOptions()
-        self.options.add_argument('--headless')
+        self.options.add_argument("--headless")
+        self.options.add_argument("--incognito")
         self.browser_service = Service(executable_path=self.chrome_path)
         self.browser = Chrome(service=self.browser_service, options=self.options)
 
